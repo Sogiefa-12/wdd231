@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #e6efe6;
+}
+
+/* Header styles */
+header {
+    background: white;
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    height: 40px;
+}
+
+
+/* Navigation styles */
+
+#navMenu{
+    background: #222;
+    color: white;
+    display: flex;
+}
+
+#navMenu a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    flex: 1;
+    text-align: center;
+}
+
+#navMenu a:hover {
+    background: #444;
+}
+
+
+/* Harmburger menu styles */
+#menuButton{
+    display: none;
+    font-size: 24px;
+    background: none;
+    cursor: pointer;
+}
+
+/* Main content styles */
+main{
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 15px;
+}
+
+/* Top Section styles */
+.top-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.about h2,
+.photo h2,
+.courses h2 {
+    background: #333;
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.about p{
+    background: #eee;
+    padding: 10px;
+}
+
+.photo img{
+    width: 100%;
+    background: #ddd;
+    padding: 10px;
+}
+
+/* Course Filters */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.filters button{
+    padding: 6px 15px;
+    border: 1px solid #999;
+    background: #ddd;
+    cursor: pointer;
+}
+
+/* Course Cards */
+#courseContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.course-card{
+    padding: 10px 20px;
+    border: 1px solid #999;
+    background: #eee;
+}
+
+.completed {
+    background: #2e7d32;
+    color: white;
+    font-weight: bold;
+}
+
+/* Social */
+.social{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+/* Footer styles */
+footer{
+    background: #eee;
+    text-align: center;
+    font-size: 12px;
+    padding:10px;
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #menuButton {
+        display: block;
+    }
+
+    #navMenu{
+        flex-direction: column;
+        display: none;
+    }
+
+    #navMenu.open{
+        display: flex;
+    }
+
+    .top-section{
+        grid-template-columns: 1fr;
+    }
+
+    .filters{
+      flex-direction: column;
+      align-items: center;  
+    }
+}
