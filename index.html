@@ -1,56 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Student web development homepage">
+
     <title>Student Home Page</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/style.css">
 
     <script src="scripts/home.js" defer></script>
+
 </head>
+
 <body>
     <header>
+    
         <div class="header-container">
-
+    
             <div class="logo-area">
-                <img src="images/logo.png" alt="Site logo">
+                <img src="images/logo.JPG" alt="Site logo">
                 <span>Chamber of Commerce</span>
             </div>
-
-            <button id="menuButton">☰</button>
+    
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Chamber Project</a></li>
+                    <li><a href="#">Final Project</a></li>
+                </ul>
+            </nav>
+    
+            <button id="menuButton" aria-label="Open navigation menu">☰</button>
+    
         </div>
+    
     </header>
 
-    <nav id="navMenu">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Chamber Project</a></li>
-            <li><a href="#">Final Project</a></li>
-        </ul>
-    </nav>
+
 
     <main>
+
         <h1>Home</h1>
-        <section> class="top-section"> 
+
+        <section class="top-section">
+
             <div class="about">
 
                 <h2>About Me</h2>
-                <p>Hello my name is Sarah Imarenakhue Ogiefa, I am a student of BYU Idaho, pressently studying software development.</p>
+
+                <p>
+                    Hello, my name is Sarah Imarenakhue Ogiefa. I am currently a student at BYU–Idaho, where I am studying Software
+                    Development. I have a strong interest in learning how technology works and how software can be used to solve real-world
+                    problems. Through my studies, I am developing skills in web development, programming, and problem-solving, which are
+                    helping me build a solid foundation for a career in the technology field.
+                    
+                    As I continue my studies, I am focused on improving my technical skills and gaining practical experience in building
+                    websites and applications. I enjoy learning new tools and technologies that help create efficient and user-friendly
+                    digital solutions. My goal is to grow as a software developer and contribute to projects that make a positive impact
+                    through technology.
+                </p>
+
             </div>
 
             <div class="photo">
+
                 <h2>Student Photo</h2>
-                <img src="images/student_photo.jpg" alt="Student photo">
+
+                <img src="images/profile.jpeg" alt="Student photo">
+
             </div>
+
         </section>
 
+
         <section class="courses">
+
             <h2>Web Certificate Courses</h2>
 
             <div class="filters">
@@ -58,26 +89,43 @@
                 <button id="all">All</button>
                 <button id="cse">CSE</button>
                 <button id="wdd">WDD</button>
+
             </div>
-            
+
             <div id="courseContainer"></div>
 
             <p id="totalCredits"></p>
+
         </section>
 
-        <section class="social">
+
+        <section>
+
             <h2>Social Media</h2>
-            <ul>
+
+            <ul class="social">
+
                 <li><a href="https://www.facebook.com/sarah.ogiefa" target="_blank">Facebook</a></li>
+
                 <li><a href="https://www.linkedin.com/in/sarah-ogiefa-9b8b1b1b3/" target="_blank">LinkedIn</a></li>
+
                 <li><a href="https://www.instagram.com/sarah_ogiefa/" target="_blank">Instagram</a></li>
+
             </ul>
+
         </section>
+
     </main>
 
+
     <footer>
-        <p>&copy; <span id="year"></span>Sarah Imarhenakhue Ogiefa . Abuja, Nigeria</p>
+
+        <p>© <span id="year"></span> Sarah Imarenakhue Ogiefa • Abuja, Nigeria</p>
+
         <p>Last Modification: <span id="lastModified"></span></p>
+
     </footer>
+
 </body>
+
 </html>

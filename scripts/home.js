@@ -8,14 +8,14 @@ const courses = [
 
 ];
 
-const container = document.querySelector("#courseContainer");
-const creditsDisplay = document.querySelector("#totalCredits");
+const container=document.querySelector("#courseContainer");
+const creditsDisplay=document.querySelector("#totalCredits");
 
 function displayCourses(courseList){
 
 container.innerHTML="";
 
-courseList.forEach(course=>{
+courseList.forEach((course)=>{
 
 const card=document.createElement("div");
 
@@ -38,7 +38,9 @@ creditsDisplay.textContent=
 
 }
 
-document.querySelector("#all").addEventListener("click",()=>displayCourses(courses));
+document.querySelector("#all").addEventListener("click",()=>{
+displayCourses(courses);
+});
 
 document.querySelector("#wdd").addEventListener("click",()=>{
 
@@ -58,18 +60,18 @@ displayCourses(filtered);
 
 displayCourses(courses);
 
+
 /* MOBILE MENU */
 
 const menuButton=document.querySelector("#menuButton");
 const navMenu=document.querySelector("#navMenu");
 
 menuButton.addEventListener("click",()=>{
-
 navMenu.classList.toggle("open");
-
 });
 
-/* FOOTER INFO */
+
+/* FOOTER */
 
 document.querySelector("#year").textContent=new Date().getFullYear();
 

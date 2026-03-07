@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +9,8 @@ body {
     background: #e6efe6;
 }
 
-/* Header styles */
+/* HEADER */
+
 header {
     background: white;
     border-bottom: 1px solid #ccc;
@@ -18,10 +19,11 @@ header {
 
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    gap: 20px;
 }
+
+/* LOGO */
 
 .logo-area {
     display: flex;
@@ -33,45 +35,52 @@ header {
     height: 40px;
 }
 
+/* NAVIGATION */
 
-/* Navigation styles */
-
-#navMenu{
+#navMenu {
     background: #222;
-    color: white;
+    margin-left: 20px;
+}
+
+#navMenu ul {
     display: flex;
+    list-style: none;
+    gap: 20px;
 }
 
 #navMenu a {
     color: white;
     text-decoration: none;
-    padding: 12px;
-    flex: 1;
-    text-align: center;
+    display: block;
+    padding: 12px 15px;
 }
 
 #navMenu a:hover {
     background: #444;
 }
 
+/* HAMBURGER MENU */
 
-/* Harmburger menu styles */
-#menuButton{
+#menuButton {
+    margin-left: auto;
     display: none;
     font-size: 24px;
     background: none;
+    border: none;
     cursor: pointer;
 }
 
-/* Main content styles */
-main{
+/* MAIN CONTENT */
+
+main {
     max-width: 900px;
     margin: auto;
     background: white;
     padding: 15px;
 }
 
-/* Top Section styles */
+/* TOP SECTION */
+
 .top-section {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -88,18 +97,19 @@ main{
     margin-bottom: 5px;
 }
 
-.about p{
+.about p {
     background: #eee;
     padding: 10px;
 }
 
-.photo img{
+.photo img {
     width: 100%;
     background: #ddd;
     padding: 10px;
 }
 
-/* Course Filters */
+/* FILTER BUTTONS */
+
 .filters {
     display: flex;
     justify-content: center;
@@ -107,22 +117,27 @@ main{
     margin: 10px 0;
 }
 
-.filters button{
+.filters button {
     padding: 6px 15px;
     border: 1px solid #999;
     background: #ddd;
     cursor: pointer;
 }
 
-/* Course Cards */
-#courseContainer{
+.filters button:hover {
+    background: #ccc;
+}
+
+/* COURSE CARDS */
+
+#courseContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
 }
 
-.course-card{
+.course-card {
     padding: 10px 20px;
     border: 1px solid #999;
     background: #eee;
@@ -134,45 +149,64 @@ main{
     font-weight: bold;
 }
 
-/* Social */
-.social{
+/* SOCIAL MEDIA */
+
+.social {
     display: flex;
     justify-content: center;
     gap: 20px;
-    font-size: 28px;
+    list-style: none;
     margin: 20px 0;
 }
 
-/* Footer styles */
-footer{
+.social a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.social a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+footer {
     background: #eee;
     text-align: center;
     font-size: 12px;
-    padding:10px;
+    padding: 10px;
 }
 
+/* MOBILE RESPONSIVE */
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
+
     #menuButton {
         display: block;
     }
 
-    #navMenu{
+    #navMenu ul {
         flex-direction: column;
         display: none;
     }
 
-    #navMenu.open{
+    #navMenu.open ul {
         display: flex;
     }
 
-    .top-section{
+    .top-section {
         grid-template-columns: 1fr;
     }
 
-    .filters{
-      flex-direction: column;
-      align-items: center;  
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo img {
+        width: 50%;
+        margin: auto;
+        display: block;
     }
 }
