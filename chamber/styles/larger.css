@@ -1,0 +1,116 @@
+@media (min-width:768px) {
+
+    /* HEADER LAYOUT */
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        padding: 1rem 2rem;
+    }
+
+    .header-left {
+        justify-content: flex-start;
+    }
+
+    /* NAVIGATION */
+
+    nav ul {
+        justify-content: flex-end;
+        padding-right: 2rem;
+    }
+
+    /* MEMBER GRID */
+
+    #members.grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    /* CARD IMPROVEMENTS */
+
+    section {
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    section img {
+        max-width: 150px;
+    }
+
+    /* LIST VIEW */
+
+    #members.list {
+        display: grid;
+        gap: 1rem;
+    }
+
+    #members.list section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem;
+        border-bottom: 1px solid #ccc;
+        background: #f4f4f4;
+    }
+
+    #members.list img {
+        max-width: 120px;
+        margin-bottom: 0.5rem;
+    }
+
+    #members.list h3 {
+        margin: 0.4rem 0;
+    }
+
+    #members.list p {
+        margin: 0.2rem 0;
+    }
+
+    #members.list a {
+        margin-top: 0.4rem;
+    }
+
+    /* FOOTER */
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .footer-left {
+        text-align: left;
+    }
+
+    .footer-center {
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+        /* HERO TEXT POSITION */
+    
+        .hero-text {
+            bottom: 40px;
+        }
+    
+        /* HOME GRID LAYOUT */
+    
+        .home-grid {
+            grid-template-columns: 2fr 1fr 1fr;
+            align-items: start;
+        }
+    
+        /* SPOTLIGHT GRID */
+    
+        #spotlight-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+}

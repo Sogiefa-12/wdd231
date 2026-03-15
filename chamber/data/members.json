@@ -1,0 +1,68 @@
+{
+"members":[
+
+{
+"name":"Abuja Tech Hub",
+"address":"Central Business District, Abuja",
+"phone":"+234 901 234 5678",
+"website":"https://abujatechhub.com",
+"image":"techhub.jpeg",
+"membership":3
+},
+
+{
+"name":"Capital City Bank",
+"address":"Wuse Zone 4, Abuja",
+"phone":"+234 902 555 1234",
+"website":"https://capitalbank.com",
+"image":"bank.jpeg",
+"membership":3
+},
+
+{
+"name":"Sunrise Bakery",
+"address":"Garki Area 2, Abuja",
+"phone":"+234 803 111 4455",
+"website":"https://sunrisebakery.com",
+"image":"bakery.jpeg",
+"membership":1
+},
+
+{
+"name":"Abuja Grand Hotel",
+"address":"Maitama District",
+"phone":"+234 801 888 9999",
+"website":"https://abujagrandhotel.com",
+"image":"hotel.jpeg",
+"membership":3
+},
+
+{
+"name":"Green Harvest Farms",
+"address":"Kubwa, Abuja",
+"phone":"+234 809 222 3333",
+"website":"https://greenharvest.com",
+"image":"farm.jpeg",
+"membership":2
+},
+
+{
+"name":"Elite Fitness Gym",
+"address":"Utako, Abuja",
+"phone":"+234 705 777 1212",
+"website":"https://elitefitness.com",
+"image":"fitness.jpeg",
+"membership":2
+},
+
+{
+"name":"Future Leaders School",
+"address":"Gwarinpa Estate",
+"phone":"+234 812 345 7788",
+"website":"https://futureleadersschool.com",
+"image":"school.jpeg",
+"membership":1
+}
+
+]
+}
