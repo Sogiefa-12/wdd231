@@ -26,6 +26,8 @@
     #members.grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
+
+        
     }
 
     /* CARD IMPROVEMENTS */
@@ -71,6 +73,11 @@
 
     #members.list a {
         margin-top: 0.4rem;
+    }
+
+    #members section .badge{
+        width: 110px;
+        text-align: center;
     }
 
     /* FOOTER */
