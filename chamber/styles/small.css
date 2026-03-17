@@ -36,6 +36,7 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -44,8 +45,17 @@ nav a {
     font-weight: 500;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus {
     text-decoration: underline;
+}
+
+nav a.active {
+    background: white;
+    color: #004080;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
 }
 
 /* MAIN */
@@ -97,6 +107,12 @@ h2 {
     align-items: center;
     text-align: center;
     border-bottom: 1px solid #ccc;
+    padding: 0.8rem;
+}
+
+
+#members.list img{
+    display: none;
 }
 
 /* MEMBER CARDS */
