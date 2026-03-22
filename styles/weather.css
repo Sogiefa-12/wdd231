@@ -1,0 +1,58 @@
+/* GLOBAL STYLES */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* HEADER */
+h1 {
+    background: #004080;
+    color: white;
+    margin: 0;
+    padding: 1rem;
+}
+
+/* MAIN CONTENT */
+main {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* TEMPERATURE TEXT */
+main p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* WEATHER ICON */
+figure {
+    margin: 0;
+}
+
+#weather-icon {
+    width: 100px;
+    height: auto;
+}
+
+/* DESCRIPTION */
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #002b55;
+    color: white;
+    font-size: 0.9rem;
+}
