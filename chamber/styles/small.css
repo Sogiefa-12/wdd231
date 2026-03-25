@@ -100,6 +100,37 @@ main h2 {
     border-radius: 4px;
 }
 
+/* HAMBURGER MENU */
+
+#menu {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+}
+
+.navigation.open {
+    display: flex;
+}
+
 .view-buttons button:hover {
     background: #002b55;
 }
@@ -156,17 +187,14 @@ section p {
 .hero {
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: clamp(250px, 50vh, 500px);
     overflow: hidden;
 }
 
 .hero img {
-    position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    max-width: none;
     z-index: 1;
 }
 
