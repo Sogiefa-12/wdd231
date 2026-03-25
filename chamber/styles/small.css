@@ -125,6 +125,7 @@ main h2 {
 .navigation {
     display: none;
     flex-direction: column;
+    background: #004080;
 }
 
 .navigation.open {

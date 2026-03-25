@@ -21,6 +21,16 @@
         padding-right: 2rem;
     }
 
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
     /* MEMBER GRID */
 
     #members.grid {
