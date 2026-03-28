@@ -341,3 +341,181 @@ footer {
 .level3 {
     background: #ffd700;
 }
+
+/* ---------------- JOIN PAGE LAYOUT ---------------- */
+
+.join-layout {
+    padding: 1rem;
+}
+
+/* ---------------- FORM STYLING ---------------- */
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #f4f4f4;
+    padding: 1.2rem;
+    border-radius: 6px;
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    margin-top: 0.3rem;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.join-form textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+/* INPUT FOCUS (Accessibility) */
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus {
+    outline: 2px solid #004080;
+    border-color: #004080;
+}
+
+/* SUBMIT BUTTON */
+
+.join-form input[type="submit"] {
+    background: #004080;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.7rem;
+    transition: background 0.3s ease;
+}
+
+.join-form input[type="submit"]:hover {
+    background: #002b55;
+}
+
+/* ---------------- MEMBERSHIP CARDS ---------------- */
+
+.membership-cards {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+    /* animation */
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeInUp 0.9s ease forwards;
+}
+
+.card:nth-child(2) {
+    animation-delay: .2s;
+}
+
+.card:nth-child(3) {
+    animation-delay: .4s;
+}
+
+.card:nth-child(4) {
+    animation-delay: .6s;
+}
+
+.card h3 {
+    margin-top: 0.5rem;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 6px 12px;
+    background: #004080;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.card a:hover {
+    background: #002b55;
+    transform: translateY(-2px);
+}
+
+/* ---------------- CARD ANIMATION ---------------- */
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------------- MODALS ---------------- */
+
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 400px;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+dialog h2 {
+    margin-top: 0;
+}
+
+.close {
+    border: none;
+    background: #004080;
+    color: white;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    float: right;
+}
+
+
+
+/*--------THANK YOU PAGE---------*/
+
+.thankyou-section {
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+
+.application-results {
+    background: #f4f4f4;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+    text-align: left;
+
+}
+
+.application-results p {
+    margin: 0.5rem 0;
+}
