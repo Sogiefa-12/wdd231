@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Food Discovery Guide - Site Plan</title>
+
+    <meta name="description" content="Site plan for the Local Food Discovery Guide, a web application designed to help users find local food options in their area.">
+    <meta name="author" content="Sarah Imarenakhue Ogiefa">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    
+    <style>
+        /* COLOR SCHEME */
+        :root {
+            --primary-color: #2a9d8f;
+            --secondary-color: #f4a261;
+            --background-color: #f8f9fa;
+            --text-color: #333;
+
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 1rem;
+        }
+
+        h1, h2 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        section {
+            background: white;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 6px;
+        }
+
+        .wireframe {
+            border: 2px dashed #ccc;
+            padding: 1rem;
+            margin-top: 1rem;
+            background: #fafafa;
+        }
+
+        .row {
+            border: 1px solid #999;
+            padding: 15px;
+            margin: 8px 0;
+            text-align: center;
+            background: #fff;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .box {
+            border: 1px solid #999;
+            padding: 20px;
+            margin: 10px 0;
+            text-align: center;
+            background: white;
+        }
+
+        /* Color Coding Wireframe Sections */
+        .header { background: #e9f5f3;}
+        .hero { background: #fef3e8;}
+        .feature { background: #eef2ff;}
+        .restaurants { background: #f3f4f6;}
+        .tips { background: #e8f7ee;}
+        .footer { background: #f1f1f1;}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Local Food Discovery Guide</h1>
+        <p>Website Project Site Plan</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Project Overview</h2>
+            <p>The Local Food Discovery Guide is a web application designed to help users find local food options in their area. The site will feature a user-friendly interface that allows users to search for local restaurants, farmers' markets, and food events. The goal is to promote local food culture and support small businesses.</p>
+            <p>This site plan outlines the structure and functionality of the Local Food Discovery Guide.</p>
+
+            <p><strong>Optional Domain:</strong> localfoodguide.com</p>
+        </section>
+
+        <section>
+            <h2>Site Purpose</h2>
+            <p>The purpose of the Local Food discovery website is to help users explore local foods and restaurants easily.
+                The site will provide information about meals, recommended places to eat, and tips 
+                for discovering new foods. It will also include dynamic features such as location-based suggestions
+                and weather-based food recommendations.
+            </p>
+        </section>
+
+        <section>
+            <h2>Target Audience</h2>
+            <p>
+                The target audience for this website includes people who enjoy exploring
+                new foods, tourists looking for local dining options, and residents who
+                want to discover restaurants in their area.
+            </p>
+        </section>
+
+        <section>
+            <h2>Scenarios</h2>
+            <ul> 
+                <li>What restaurants near me serve popular local meals?</li>
+                <li>What food would be good to eat based on today's weather?</li>
+                <li>Where can I discover new meals I haven't tried before?</li>
+            </ul>
+        </section>
+
+        <section> 
+            <h2>Color Scheme</h2>
+            <p><strong>Primary Color:</strong> #2a9d8f</p>
+            <p>Used for headers, navigation bar, and important highlights</p>
+
+            <p><strong>Secondary Color:</strong> #f4a261</p>
+            <p>Used for buttons, links, featured section and accents</p>
+
+
+            <p><strong>Background Color:</strong> #f8f9fa</p>
+            <p>Used for the main background to create a clean and inviting look</p>
+            <p><strong>Text Color:</strong> #333</p>
+        </section>
+
+        <section> 
+            <h2>Typography</h2>
+            <p><strong>Primary Font:</strong> Roboto</p>
+            <p>Used for body text and general content</p>
+            <p><strong>Secondary Font:</strong> Poppins</p>
+            <p>Used for headings and important text elements</p>
+        </section>
+
+        <section>
+            <h2>Wireframes</h2>
+            <p>
+                The following wireframes show how the homepage layout will appear on
+                mobile devices and larger screens. The mobile design uses a stacked
+                layout, while the desktop design uses a grid layout to display more
+                content side-by-side.
+            </p>
+        
+            <h3>Mobile View</h3>
+        
+            <div class="wireframe">
+                <div class="row header">Header / Logo</div>
+                <div class="row nav">Navigation Menu</div>
+                <div class="row hero">Hero Section</div>
+                <div class="row feature">Featured Foods</div>
+                <div class="row restaurants">Restaurant Highlights</div>
+                <div class="row tips">Food Guide Tips</div>
+                <div class="row footer">Footer</div>
+            </div>
+        
+            <h3>Desktop View</h3>
+        
+            <div class="wireframe desktop">
+                <div class="row header">Header + Navigation</div>
+                <div class="row hero">Hero Banner</div>
+        
+                <div class="grid">
+                    <div class="box">Featured Foods</div>
+                    <div class="box">Restaurant List</div>
+                </div>
+        
+                <div class="row tips">Food Guide Tips</div>
+                <div class="row footer">Footer</div>
+            </div>
+        
+        </section>
+
+
+        <section> 
+            <h2>APIs and Dynamic Features</h2>
+
+            <p><strong>Geolocation API:</strong></p>
+            <p>Used to detect the user's location and provide location-based suggestions.</p>
+
+            <p><strong>Weather API:</strong></p>
+            <p>Used to fetch current weather information and provide weather-based food recommendations.</p>
+
+            <p><strong>Local JSON File</strong></p>
+            <p>Restaurant information such as images, names, and descriptions will be stored
+                in a JSON file and loaded dynamically on the restaurants page. </p>
+
+        </section>
+    </main>
+</body>
+</html>
