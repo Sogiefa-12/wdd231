@@ -1,0 +1,12 @@
+@media (min-width: 641px) {
+
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .place-card img:hover {
+        transform: scale(1.05);
+        filter: brightness(1.1);
+        transition: 0.3s;
+    }
+}
