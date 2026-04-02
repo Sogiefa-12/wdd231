@@ -149,7 +149,22 @@
     }
     
 
+    .discover-grid {
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
 
+    .place-card img {
+        transition: 0.3s ease, filter 0.3s ease;
+    }
+
+    .place-card img:hover {
+        transform: scale(1.05);
+        filter: brightness(0.8);
+    }
 }
 
 
