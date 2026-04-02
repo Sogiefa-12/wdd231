@@ -143,35 +143,38 @@
         max-width: 1100px;
         margin: auto;
     }
-    
+
     .membership-cards {
         margin-top: 0;
     }
-    
 
+
+    /* DISCOVER GRID */
     .discover-grid {
-        grid-template-areas:
-            "card1 card2"
-            "card3 card4"
-            "card5 card6"
-            "card7 card8";
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
     }
-
+    
     .place-card img {
-        transition: 0.3s ease, filter 0.3s ease;
+        transition: transform 0.3s ease, filter 0.3s ease;
     }
 
     .place-card img:hover {
         transform: scale(1.05);
         filter: brightness(0.8);
     }
-}
 
+}
 
 @media (min-width: 1025px) {
+    
+    /* DISCOVER GRID */
 
-.discover-grid {
-grid-template-columns: repeat(4, 1fr);
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+
+    }
 }
 
-}
+
+
