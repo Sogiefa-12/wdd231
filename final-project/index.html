@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Local Food Discovery Guide</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Discover local foods and restaurants near you.">
+    <meta name="author" content="Sarah Imarhenakhue Ogiefa">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Local Food Discovery Guide">
+    <meta property="og:description" content="Find the best local meals and restaurants.">
+    <meta property="og:image" content="images/food-hero.webp">
+    <meta property="og:url" content="https://yourusername.github.io/final-project/index.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- JavaScript -->
+    <script type="module" src="scripts/main.js"></script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-left">
+        <h1>🍽️ Local Food Guide</h1>
+    </div>
+
+    <nav>
+        <button id="menu" aria-label="Menu">☰</button>
+        <ul class="navigation">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="restaurants.html">Restaurants</a></li>
+            <li><a href="guide.html">Food Guide</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img src="images/food-hero.webp" alt="A variety of delicious local foods">
+        <div class="hero-text">
+            <h2>Discover Amazing Local Food</h2>
+            <p>Explore the best meals and restaurants around you</p>
+        </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="location">
+        <h2>Your Location</h2>
+        <p id="user-location">Detecting your location...</p>
+    </section>
+
+    <!-- WEATHER -->
+    <section class="weather">
+        <h2>Current Weather</h2>
+        <div class="weather-info">
+            <img id="weather-icon" src="" alt="Weather icon" style="display:none;">
+            <div>
+                <p id="temp">Loading temperature...</p>
+                <p id="desc"></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommended">
+        <h2>Recommended Foods for Your Location</h2>
+        <div id="recommended-foods" class="food-grid"></div>
+    </section>
+
+    <!-- FEATURED FOODS -->
+    <section class="featured">
+        <h2>Featured Foods</h2>
+        <div id="featured-container"></div>
+
+        <dialog id="food-modal">
+            <h3 id="food-name"></h3>
+            <img id="food-image" src="" alt="">
+            <p id="food-description"></p>
+            <button id="favorite-btn">❤️ Add to Favorites</button>
+            <button id="close-modal">Close</button>
+        </dialog>
+    </section>
+
+</main>
+
+<footer>
+    <p>© <span id="year"></span> | Sarah Ogiefa | WDD 231 Final Project</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+</body>
+
+</html>

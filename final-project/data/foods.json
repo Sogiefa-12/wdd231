@@ -1,0 +1,64 @@
+{
+  "foods": [
+    {
+      "name": "Jollof Rice",
+      "image": "images/jollof.webp",
+      "description": "A flavorful West African rice dish cooked with tomatoes, peppers, and spices."
+    },
+    {
+      "name": "Suya",
+      "image": "images/suya.webp",
+      "description": "Spicy grilled meat skewers coated with traditional peanut spice mix."
+    },
+    {
+      "name": "Pounded Yam & Egusi",
+      "image": "images/pounded-yam.webp",
+      "description": "A classic Nigerian meal served with rich melon seed soup."
+    },
+    {
+      "name": "Fried Rice",
+      "image": "images/fried-rice.webp",
+      "description": "A colorful rice dish mixed with vegetables, meat, and spices."
+    },
+    {
+      "name": "Pepper Soup",
+      "image": "images/pepper-soup.webp",
+      "description": "A hot and spicy soup known for its rich flavor and aroma."
+    },
+    {
+      "name": "Moi Moi",
+      "image": "images/moi-moi.webp",
+      "description": "A steamed bean pudding made with blended beans and spices."
+    },
+    {
+      "name": "Amala & Ewedu",
+      "image": "images/amala.webp",
+      "description": "A Yoruba delicacy served with smooth ewedu soup and stew."
+    },
+    {
+      "name": "Eba & Okra Soup",
+      "image": "images/eba-okra.webp",
+      "description": "Garri-based swallow paired with delicious okra soup."
+    },
+    {
+      "name": "Ofada Rice & Sauce",
+      "image": "images/ofada.webp",
+      "description": "Local rice served with spicy ayamase (green pepper sauce)."
+    },
+    {
+      "name": "Akara",
+      "image": "images/akara.webp",
+      "description": "Deep-fried bean cakes, crispy outside and soft inside."
+    },
+    {
+      "name": "Nkwobi",
+      "image": "images/nkwobi.webp",
+      "description": "A spicy cow foot delicacy served with palm oil sauce."
+    },
+    {
+      "name": "Boli & Groundnut",
+      "image": "images/boli.webp",
+      "description": "Roasted plantain served with peanuts or pepper sauce."
+    }
+  ]
+}

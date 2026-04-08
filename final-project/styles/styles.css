@@ -1,0 +1,330 @@
+/* =========================
+   RESET / BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background: #004080;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-left h1 {
+    font-size: 1.5rem;
+}
+
+/* NAV */
+nav {
+    position: relative;
+}
+
+#menu {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#menu.open {
+    transform: rotate(90deg);
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.navigation a:hover,
+.navigation .active {
+    border-bottom: 3px solid #ff6347;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 64, 128, 0.95);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.hero-text h2 {
+    font-weight: 600;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1.5);
+}
+
+.hero-text p{
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    padding: 2rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #004080;
+}
+
+/* =========================
+   LOCATION + WEATHER
+========================= */
+.location,
+.weather {
+    background: #ffffff;
+    margin: 1rem 2rem;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #32cd32;
+    /* API indicator */
+}
+
+/* =========================
+   FOOD CARDS
+========================= */
+#featured-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.food-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-top: 5px solid #ff6347;
+    /* dynamic highlight */
+}
+
+.food-card:hover {
+    transform: scale(1.03);
+}
+
+.food-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.food-card h3 {
+    padding: 0.5rem 1rem 0;
+    color: #004080;
+}
+
+.food-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* Weather Section */
+.weather-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.weather-info img {
+    width: 60px;
+    height: 60px;
+}
+
+/* Recommended Foods */
+.recommended {
+    padding: 2rem;
+}
+
+.recommended h2 {
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 2rem 0;
+    gap: 1.5rem;
+}
+
+.food-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-top: 5px solid #ff6347;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-grid .food-card:hover {
+    transform: scale(1.03);
+}
+
+.food-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.food-grid .food-card h3 {
+    padding: 0.5rem 1rem 0;
+    color: #004080;
+}
+
+.food-grid .food-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* =========================
+   MODAL
+========================= */
+dialog {
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 90%;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+dialog img {
+    width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+dialog h3 {
+    color: #004080;
+}
+
+dialog button {
+    border: none;
+    padding: 0.6rem 1rem;
+    margin: 0.5rem 0.3rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Buttons */
+#favorite-btn {
+    background: #ff6347;
+    color: #fff;
+}
+
+#favorite-btn:hover {
+    opacity: 0.9;
+}
+
+#close-modal {
+    background: #ccc;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+@media (max-width: 768px) {
+
+    #menu {
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #004080;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+        z-index: 1000;
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .hero {
+        height: 220px;
+    }
+
+    .hero-text {
+        font-size: 0.9rem;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .food-grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 columns on large screens */
+    }
+}
