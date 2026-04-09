@@ -59,6 +59,25 @@
       "name": "Boli & Groundnut",
       "image": "images/boli.webp",
       "description": "Roasted plantain served with peanuts or pepper sauce."
-    }
+    },
+
+    {
+  "name": "Efo Riro",
+  "image": "images/efo-riro.webp",
+  "description": "A rich vegetable soup cooked with spinach and assorted meat.",
+  "category": "Soup"
+},
+{
+  "name": "Ogbono Soup",
+  "image": "images/ogbono.webp",
+  "description": "A thick and slimy soup made from ogbono seeds.",
+  "category": "Soup"
+},
+{
+  "name": "Abacha",
+  "image": "images/abacha.webp",
+  "description": "African salad made with cassava and palm oil.",
+  "category": "Salad"
+}
   ]
 }

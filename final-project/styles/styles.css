@@ -80,7 +80,6 @@ nav {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(100%);
 }
 
 .hero-text {
@@ -91,22 +90,40 @@ nav {
     color: #fff;
     padding: 1rem;
     border-radius: 8px;
+    max-width: 320px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .hero-text h2 {
-    font-weight: 600;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 1.5);
+    color: #ff6347;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 10px rgb(255, 255, 255);
 }
 
-.hero-text p{
+.hero-text p {
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* =========================
+   MAIN GRID (KEY FIX)
+========================= */
+.main-grid {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 /* =========================
    SECTIONS
 ========================= */
 section {
-    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
 }
 
 h2 {
@@ -119,56 +136,10 @@ h2 {
 ========================= */
 .location,
 .weather {
-    background: #ffffff;
-    margin: 1rem 2rem;
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #32cd32;
-    /* API indicator */
 }
 
-/* =========================
-   FOOD CARDS
-========================= */
-#featured-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.food-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    border-top: 5px solid #ff6347;
-    /* dynamic highlight */
-}
-
-.food-card:hover {
-    transform: scale(1.03);
-}
-
-.food-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.food-card h3 {
-    padding: 0.5rem 1rem 0;
-    color: #004080;
-}
-
-.food-card p {
-    padding: 0 1rem 1rem;
-    font-size: 0.9rem;
-}
-
-/* Weather Section */
+/* Weather */
 .weather-info {
     display: flex;
     align-items: center;
@@ -180,51 +151,47 @@ h2 {
     height: 60px;
 }
 
-/* Recommended Foods */
-.recommended {
-    padding: 2rem;
-}
-
-.recommended h2 {
-    color: #004080;
-    margin-bottom: 1rem;
-}
-
-.food-grid {
+/* =========================
+   FOOD GRID (UNIFIED FIX)
+========================= */
+.food-grid,
+#featured-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 2rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
 }
 
+/* =========================
+   FOOD CARD
+========================= */
 .food-card {
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     border-top: 5px solid #ff6347;
     display: flex;
     flex-direction: column;
 }
 
-.food-grid .food-card:hover {
+.food-card:hover {
     transform: scale(1.03);
 }
 
 .food-card img {
     width: 100%;
-    height: 150px;
+    height: 160px;
     object-fit: cover;
 }
 
-.food-grid .food-card h3 {
+.food-card h3 {
     padding: 0.5rem 1rem 0;
     color: #004080;
 }
 
-.food-grid .food-card p {
+.food-card p {
     padding: 0 1rem 1rem;
     font-size: 0.9rem;
 }
@@ -250,10 +217,6 @@ dialog img {
     margin: 1rem 0;
 }
 
-dialog h3 {
-    color: #004080;
-}
-
 dialog button {
     border: none;
     padding: 0.6rem 1rem;
@@ -262,18 +225,46 @@ dialog button {
     cursor: pointer;
 }
 
-/* Buttons */
 #favorite-btn {
     background: #ff6347;
     color: #fff;
 }
 
-#favorite-btn:hover {
-    opacity: 0.9;
-}
-
 #close-modal {
     background: #ccc;
+}
+
+/* =========================
+   FORM
+========================= */
+.form-section {
+    margin: 2rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input,
+textarea {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button[type="submit"] {
+    background: #004080;
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #003060;
 }
 
 /* =========================
@@ -296,7 +287,7 @@ footer {
     }
 
     .navigation {
-        position: absolute;
+        position: fixed;
         top: 70px;
         right: 0;
         background: #004080;
@@ -304,7 +295,9 @@ footer {
         width: 200px;
         display: none;
         padding: 1rem;
-        z-index: 1000;
+        z-index: 2000;
+        box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.3);
+        /* FIXED layering */
     }
 
     .navigation.open {
@@ -314,17 +307,25 @@ footer {
     .hero {
         height: 220px;
     }
-
-    .hero-text {
-        font-size: 0.9rem;
-    }
 }
 
-
-
+/* =========================
+   DESKTOP LAYOUT (KEY FIX)
+========================= */
 @media (min-width: 1024px) {
+
+    .main-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .recommended,
+    .featured {
+        height: 100%;
+    }
+
     .food-grid {
-        grid-template-columns: repeat(4, 1fr);
-        /* 4 columns on large screens */
+        grid-template-columns: repeat(2, 1fr);
+        /* balanced */
     }
 }

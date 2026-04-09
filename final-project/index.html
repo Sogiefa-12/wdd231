@@ -36,75 +36,101 @@
 
 <body>
 
-<header>
-    <div class="header-left">
-        <h1>🍽️ Local Food Guide</h1>
-    </div>
-
-    <nav>
-        <button id="menu" aria-label="Menu">☰</button>
-        <ul class="navigation">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="restaurants.html">Restaurants</a></li>
-            <li><a href="guide.html">Food Guide</a></li>
-        </ul>
-    </nav>
-</header>
-
-<main>
-
-    <!-- HERO -->
-    <section class="hero">
-        <img src="images/food-hero.webp" alt="A variety of delicious local foods">
-        <div class="hero-text">
-            <h2>Discover Amazing Local Food</h2>
-            <p>Explore the best meals and restaurants around you</p>
+    <header>
+        <div class="header-left">
+            <h1>🍽️ Local Food Guide</h1>
         </div>
-    </section>
 
-    <!-- LOCATION -->
-    <section class="location">
-        <h2>Your Location</h2>
-        <p id="user-location">Detecting your location...</p>
-    </section>
+        <nav>
+            <button id="menu" aria-label="Menu">☰</button>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="guide.html">Food Guide</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- WEATHER -->
-    <section class="weather">
-        <h2>Current Weather</h2>
-        <div class="weather-info">
-            <img id="weather-icon" src="" alt="Weather icon" style="display:none;">
-            <div>
-                <p id="temp">Loading temperature...</p>
-                <p id="desc"></p>
+    <main class="container">
+
+        <!-- HERO -->
+        <section class="hero">
+            <img src="images/food-hero.webp" alt="A variety of delicious local foods" loading="lazy">
+            <div class="hero-text">
+                <h2>Discover Amazing Local Food</h2>
+                <p>Explore the best meals and restaurants around you</p>
             </div>
+        </section>
+
+        <!-- MAIN GRID -->
+        <div class="main-grid">
+
+            <!-- LOCATION -->
+            <section class="location">
+                <h2>Your Location</h2>
+                <p id="user-location">Detecting your location...</p>
+            </section>
+
+            <!-- WEATHER -->
+            <section class="weather">
+                <h2>Current Weather</h2>
+                <div class="weather-info">
+                    <img id="weather-icon" src="" alt="Current weather icon" style="display:none;">
+                    <div>
+                        <p id="temp">Loading temperature...</p>
+                        <p id="desc"></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RECOMMENDED FOODS -->
+            <section class="recommended">
+                <h2>Recommended Foods for Your Location</h2>
+                <div id="recommended-foods" class="food-grid"></div>
+            </section>
+
+            <!-- FEATURED FOODS -->
+            <section class="featured">
+                <h2>Featured Foods</h2>
+                <div id="featured-container"></div>
+
+                <dialog id="food-modal">
+                    <h3 id="food-name"></h3>
+                    <img id="food-image" src="" alt="">
+                    <p id="food-description"></p>
+                    <button id="favorite-btn">❤️ Add to Favorites</button>
+                    <button id="close-modal">Close</button>
+                </dialog>
+            </section>
+
         </div>
-    </section>
 
-    <section class="recommended">
-        <h2>Recommended Foods for Your Location</h2>
-        <div id="recommended-foods" class="food-grid"></div>
-    </section>
+        <!-- FORM SECTION -->
+        <section class="form-section">
+            <h2>Suggest a Local Food</h2>
 
-    <!-- FEATURED FOODS -->
-    <section class="featured">
-        <h2>Featured Foods</h2>
-        <div id="featured-container"></div>
+            <form action="thankyou.html" method="get">
 
-        <dialog id="food-modal">
-            <h3 id="food-name"></h3>
-            <img id="food-image" src="" alt="">
-            <p id="food-description"></p>
-            <button id="favorite-btn">❤️ Add to Favorites</button>
-            <button id="close-modal">Close</button>
-        </dialog>
-    </section>
+                <label for="name">Your Name:</label>
+                <input id="name" type="text" name="name" required>
 
-</main>
+                <label for="food">Food Name:</label>
+                <input id="food" type="text" name="food" required>
 
-<footer>
-    <p>© <span id="year"></span> | Sarah Ogiefa | WDD 231 Final Project</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
-</footer>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> | Sarah Ogiefa | WDD 231 Final Project</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
 
 </body>
 
