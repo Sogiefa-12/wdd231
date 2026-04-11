@@ -339,6 +339,18 @@ footer {
     padding: 1rem;
 }
 
+footer a {
+    color: #ffcc00;
+    /* bright contrast color */
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+
 
 
 /* Search Input */
