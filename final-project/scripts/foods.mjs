@@ -32,7 +32,7 @@ function displayFoods(foods) {
         card.classList.add("food-card");
 
         card.innerHTML = `
-            <img src="${food.image}" alt="${food.name}">
+            <img src="${food.image}" alt="${food.name}" loading="lazy">
             <h3>${food.name}</h3>
             <p>${food.description}</p>
         `;
@@ -75,24 +75,6 @@ closeModal.addEventListener("click", () => {
     }, 200); // Match this duration with the CSS transition time
 });
 
-/* =========================
-   FAVORITES
-========================= */
-// favoriteBtn.addEventListener("click", () => {
-//     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-//     const currentFood = {
-//         name: foodName.textContent,
-//         image: foodImage.src,
-//         description: foodDescription.textContent
-//     };
-//     if (!favorites.find(f => f.name === currentFood.name)) {
-//         favorites.push(currentFood);
-//         localStorage.setItem("favorites", JSON.stringify(favorites));
-//         alert("Added to favorites ❤️");
-//     } else {
-//         alert("Already in favorites 😉");
-//     }
-// });
 
 favoriteBtn.addEventListener("click", () => {
     if (!currentFood) return;

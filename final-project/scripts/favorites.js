@@ -14,7 +14,7 @@ if (favorites.length === 0) {
         card.className = "food-card";
 
         card.innerHTML = `
-            <img src="${food.image}" alt="${food.name}">
+            <img src="${food.image}" alt="${food.name}" loading="lazy">
             <h3>${food.name}</h3>
             <p>${food.description}</p>
         `;
