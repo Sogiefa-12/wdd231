@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Food Guide | Local Food Discovery</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Explore a complete guide of local foods, categories, and recommendations.">
+    <meta name="author" content="Sarah Ogiefa">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Food Guide">
+    <meta property="og:description" content="Browse and discover local foods easily.">
+    <meta property="og:image" content="images/food-hero.webp">
+    <meta property="og:url" content="https://yourusername.github.io/final-project/guide.html">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/guide.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <h1>🍽️ Food Guide</h1>
+        </div>
+
+        <nav>
+            <button id="menu">☰</button>
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="favorites.html">Favorites ❤️</a></li>
+                <li><a href="guide.html" class="active">Food Guide</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- FILTERS -->
+        <section class="controls">
+            <label for="search-food">Search foods</label>
+            <input type="text" id="search-food" placeholder="Search foods...">
+
+            <label for="category-filter">Category</label>
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="street">Street Food</option>
+                <option value="main">Main Dish</option>
+                <option value="snack">Snacks</option>
+            </select>
+        </section>
+
+        <!-- FOOD GRID -->
+        <section>
+            <h2>Explore Foods</h2>
+            <div id="food-guide-container" class="food-grid"></div>
+        </section>
+
+        <!-- MODAL -->
+        <dialog id="guide-modal">
+            <h3 id="guide-food-name"></h3>
+            <img id="guide-food-image" src="" alt="">
+            <p id="guide-food-desc"></p>
+
+            <button id="guide-fav-btn">❤️ Add to Favorites</button>
+            <button id="guide-close-btn">Close</button>
+        </dialog>
+
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> | Sarah Ogiefa</p>
+        <p>Last Modified: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>

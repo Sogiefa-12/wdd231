@@ -1,113 +1,5 @@
-// import { loadFoods } from "./foods.mjs";
 
-
-// const year = document.getElementById("year");
-// const lastModified = document.getElementById("lastModified");
-
-// if (year) {
-//     year.textContent = new Date().getFullYear();
-// }
-
-// if (lastModified) {
-//     lastModified.textContent = document.lastModified;
-// }
-
-// /* Menu Toggle */
-// const menuButton = document.getElementById("menu");
-// const nav = document.querySelector(".navigation");
-
-// menuButton.addEventListener("click", () => {
-//     nav.classList.toggle("open");
-//     menuButton.classList.toggle("open");
-// });
-
-
-// /* Load Foods on Page Load */
-// loadFoods();
-
-
-// /* Geolocation */
-
-// const locationInfo = document.getElementById("location-info");
-
-// if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(
-//         (position) => {
-//             const lat = position.coords.latitude;
-//             const lon = position.coords.longitude;
-
-//             getCity(lat, lon);
-//         },
-//         () => {
-//             locationInfo.textContent = "Unable to retrieve your location.";
-//         }
-//     );
-// } else {
-//     locationInfo.textContent = "Geolocation is not supported by your browser.";
-// }
-
-
-// /* Weather (OpenWeatherMap API) */
-
-// const temp = document.getElementById("temp");
-// const desc = document.getElementById("desc");
-// const weatherIcon = document.getElementById("weather-icon");
-
-// const apiKey = "d63c323e88ed73184e471fcf7dedf282";
-
-// async function getWeather(lat = 9.08, lon = 7.49) {
-//     try {
-//         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-//         const response = await fetch(url);
-//         const data = await response.json();
-
-//         temp.textContent = `Temperature: ${data.main.temp.toFixed(1)}°C`;
-//         desc.textContent = `Weather: ${data.weather[0].description}`;
-
-//         // show weather icon
-//         const iconCode = data.weather[0].icon;
-//         weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-//         weatherIcon.alt = data.weather[0].description;
-//         weatherIcon.style.display = "inline-block";
-
-//     } catch (error) {
-//         temp.textContent = "Unable to fetch weather data.";
-//         console.error("Error fetching weather data:", error);
-//     }
-// }
-
-
-// // Default to a specific location if geolocation fails
-// getWeather();
-
-
-// async function getCity(lat, lon) {
-//     try {
-//         const response = await fetch(
-//             `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`
-//         );
-
-//         const data = await response.json();
-
-//         const city =
-//             data.address.city ||
-//             data.address.town ||
-//             data.address.village ||
-//             data.address.state;
-
-//         const country = data.address.country;
-
-//         locationInfo.textContent = `${city}, ${country}`;
-//     } catch (error) {
-//         locationInfo.textContent = "Location detected, but unable to get city name.";
-//         console.error(error);
-//     }
-// }
-
-
-
-
-import { loadFoods, foodsData } from "./foods.mjs";
+import { loadFoods, foodsData, openModal } from "./foods.mjs";
 
 const recommendedFoodsContainer = document.getElementById("recommended-foods");
 const userLocationEl = document.getElementById("user-location");
@@ -143,6 +35,9 @@ function recommendFoods(temp) {
             <h3>${food.name}</h3>
             <p>${food.description}</p>
         `;
+
+        card.addEventListener("click", () => openModal(food));
+        
         recommendedFoodsContainer.appendChild(card);
     });
 }

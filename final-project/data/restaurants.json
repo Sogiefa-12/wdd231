@@ -1,0 +1,76 @@
+{
+  "restaurants": [
+    {
+      "name": "Mama Put Kitchen",
+      "city": "Abuja",
+      "lat": 9.0765,
+      "lon": 7.3986,
+      "foods": ["Jollof Rice", "Pepper Soup"],
+      "rating": 4.5,
+      "image": "images/restaurants/mamaput.jpg"
+    },
+    {
+      "name": "Suya Spot",
+      "city": "Abuja",
+      "lat": 9.0820,
+      "lon": 7.4100,
+      "foods": ["Suya", "Boli"],
+      "rating": 4.8,
+      "image": "images/restaurants/suya.jpg"
+    },
+    {
+      "name": "Taste of Lagos",
+      "city": "Lagos",
+      "lat": 6.5244,
+      "lon": 3.3792,
+      "foods": ["Fried Rice", "Chicken"],
+      "rating": 4.3,
+      "image": "images/restaurants/lagos.jpg"
+    },
+    {
+      "name": "Calabar Delight",
+      "city": "Calabar",
+      "lat": 4.9517,
+      "lon": 8.3220,
+      "foods": ["Edikang Ikong", "Fufu"],
+      "rating": 4.7,
+      "image": "images/restaurants/calabar.jpg"
+    },
+    {
+      "name": "Northern Bites",
+      "city": "Kano",
+      "lat": 12.0022,
+      "lon": 8.5919,
+      "foods": ["Tuwo Shinkafa", "Miyan Kuka"],
+      "rating": 4.4,
+      "image": "images/restaurants/kano.jpg"
+    },
+    {
+      "name": "Ibadan Grill",
+      "city": "Ibadan",
+      "lat": 7.3775,
+      "lon": 3.9470,
+      "foods": ["Amala", "Gbegiri"],
+      "rating": 4.6,
+      "image": "images/restaurants/ibadan.jpg"
+    },
+    {
+      "name": "Port Harcourt Kitchen",
+      "city": "Port Harcourt",
+      "lat": 4.8156,
+      "lon": 7.0498,
+      "foods": ["Bole & Fish", "Pepper Soup"],
+      "rating": 4.5,
+      "image": "images/restaurants/ph.jpg"
+    },
+    {
+      "name": "Abuja Food Hub",
+      "city": "Abuja",
+      "lat": 9.0579,
+      "lon": 7.4951,
+      "foods": ["Moi Moi", "Rice & Stew"],
+      "rating": 4.2,
+      "image": "images/restaurants/abuja.jpg"
+    }
+  ]
+}

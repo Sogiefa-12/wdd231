@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Foods</title>
+    <meta name="description" content="Discover local foods and restaurants near you.">
+    <meta name="author" content="Sarah Imarhenakhue Ogiefa">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Local Food Discovery Guide">
+    <meta property="og:description" content="Find the best local meals and restaurants.">
+    <meta property="og:image" content="images/food-hero.webp">
+    <meta property="og:url" content="https://yourusername.github.io/final-project/index.html">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <script type="module" src="scripts/favorites.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="header-left">
+            <h1>🍽️ ❤️ My Favorite Foods</h1>
+        </div>
+    
+        <nav>
+            <button id="menu" aria-label="Menu">☰</button>
+            <ul class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="favorites.html">Favorites ❤️</a></li>
+                <li><a href="guide.html">Food Guide</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+<main class="main-grid">
+    <section>
+        <h2>Your Saved Foods</h2>
+        <div id="favorites-container" class="food-grid"></div>
+    </section>
+</main>
+
+<footer>
+    <p>© <span id="year"></span> | Sarah Ogiefa | WDD 231 Final Project</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+</footer>>
+
+</body>
+</html>

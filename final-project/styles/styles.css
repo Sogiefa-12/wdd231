@@ -170,14 +170,16 @@ h2 {
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-top: 5px solid #ff6347;
     display: flex;
     flex-direction: column;
+
 }
 
 .food-card:hover {
-    transform: scale(1.03);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .food-card img {
@@ -205,6 +207,10 @@ dialog {
     padding: 1.5rem;
     max-width: 400px;
     width: 90%;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+
 }
 
 dialog::backdrop {
@@ -223,6 +229,20 @@ dialog button {
     margin: 0.5rem 0.3rem;
     border-radius: 6px;
     cursor: pointer;
+}
+
+dialog[open] {
+    opacity: 1;
+    transform: scale(1);
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+}
+
+dialog[open]::backdrop {
+    background: rgba(0, 0, 0, 0.6);
 }
 
 #favorite-btn {
@@ -268,6 +288,48 @@ button[type="submit"]:hover {
 }
 
 /* =========================
+   FAVORITES PAGE
+========================= */
+
+/* Reuse the food-card style */
+#favorites-container .food-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    border-top: 5px solid #ff6347;
+}
+
+#favorites-container {
+    display: grid;
+    gap: 1.5rem;
+    padding: 5rem;
+}
+
+#favorites-container .food-card:hover {
+    transform: scale(1.03);
+}
+
+#favorites-container .food-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+#favorites-container .food-card h3 {
+    padding: 0.5rem 1rem 0;
+    color: #004080;
+}
+
+#favorites-container .food-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {
@@ -275,6 +337,97 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
+}
+
+
+
+/* Search Input */
+#search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.6rem 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* Restaurant Modal */
+#restaurant-modal {
+    border: none;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 400px;
+    width: 90%;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.food-card img {
+    width:100%;
+    aspect-ratio: 16/10;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+#restaurant-modal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#restaurant-modal::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#restaurant-modal button {
+    margin-top: 1rem;
+    background: #ff6347;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+}
+
+.controls input,
+.controls select {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.card-content {
+    padding: 0.8rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.badge.top {
+    background-color: #ff6347;
+}
+
+.badge.near {
+    background: #32cd32;
+}
+
+#category-filter {
+    padding: 0.6rem;
+    border-radius: 6px;
 }
 
 /* =========================
@@ -328,4 +481,10 @@ footer {
         grid-template-columns: repeat(2, 1fr);
         /* balanced */
     }
+
+    #favorites-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }   
 }
