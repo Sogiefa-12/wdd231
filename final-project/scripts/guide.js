@@ -18,16 +18,26 @@ const closeBtn = document.getElementById("guide-close-btn");
 let foodsData = [];
 let currentFood = null;
 
-/* LOAD DATA */
+/* =========================
+   LOAD DATA
+========================= */
 async function loadFoods() {
-    const res = await fetch("./data/foods.json");
-    const data = await res.json();
-    foodsData = data.foods;
+    try {
+        const res = await fetch("./data/foods.json");
+        const data = await res.json();
 
-    displayFoods(foodsData);
+        foodsData = data.foods;
+        displayFoods(foodsData);
+
+    } catch (error) {
+        console.error("Error loading foods:", error);
+        container.innerHTML = "<p>Unable to load foods.</p>";
+    }
 }
 
-/* DISPLAY */
+/* =========================
+   DISPLAY
+========================= */
 function displayFoods(foods) {
     container.innerHTML = "";
 
@@ -36,7 +46,7 @@ function displayFoods(foods) {
         card.className = "food-card";
 
         card.innerHTML = `
-            <img src="${food.image}" alt="${food.name}">
+            <img src="${food.image}" alt="${food.name}" loading="lazy">
             <h3>${food.name}</h3>
             <p>${food.description}</p>
             <small>Category: ${food.category}</small>
@@ -48,7 +58,9 @@ function displayFoods(foods) {
     });
 }
 
-/* FILTER */
+/* =========================
+   FILTER
+========================= */
 function filterFoods() {
     const query = searchInput.value.toLowerCase();
     const category = categoryFilter.value;
@@ -66,7 +78,9 @@ function filterFoods() {
 searchInput.addEventListener("input", filterFoods);
 categoryFilter.addEventListener("change", filterFoods);
 
-/* MODAL */
+/* =========================
+   MODAL
+========================= */
 function openModal(food) {
     currentFood = food;
 
@@ -74,38 +88,73 @@ function openModal(food) {
     imgEl.src = food.image;
     descEl.textContent = food.description;
 
-    if (isFavorite(food)) {
-        favBtn.textContent = "❌ Remove from Favorites";
-    } else {
-        favBtn.textContent = "❤️ Add to Favorites";
-    }
+    updateFavoriteButton();
 
     modal.showModal();
 }
 
 closeBtn.addEventListener("click", () => modal.close());
 
-/* FAVORITES */
+function updateFavoriteButton() {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    const exists = favorites.some(f => f.name === currentFood.name);
+
+    favBtn.textContent = exists
+        ? "❌ Remove from Favorites"
+        : "❤️ Add to Favorites";
+}
+
+/* =========================
+   FAVORITES + SUCCESS MESSAGE
+========================= */
 favBtn.addEventListener("click", () => {
+    if (!currentFood) return;
+
     let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 
-    const exists = favorites.find(f => f.name === currentFood.name);
+    const exists = favorites.some(f => f.name === currentFood.name);
 
     if (exists) {
         favorites = favorites.filter(f => f.name !== currentFood.name);
-        favBtn.textContent = "❤️ Add to Favorites";
+        showToast("Removed from favorites ❌");
     } else {
         favorites.push(currentFood);
-        favBtn.textContent = "❌ Remove from Favorites";
+        showToast("Added to favorites ❤️");
     }
 
     localStorage.setItem("favorites", JSON.stringify(favorites));
+
+    updateFavoriteButton(); // refresh button state
 });
 
+/* =========================
+   TOAST (SUCCESS MESSAGE)
+========================= */
+function showToast(message) {
+    const toast = document.createElement("div");
+    toast.className = "toast";
+    toast.textContent = message;
+
+    document.body.appendChild(toast);
+
+    setTimeout(() => toast.classList.add("show"), 50);
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+        setTimeout(() => toast.remove(), 300);
+    }, 2000);
+}
+
+/* =========================
+   HELPERS
+========================= */
 function isFavorite(food) {
     const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
     return favorites.some(f => f.name === food.name);
 }
 
-/* INIT */
+/* =========================
+   INIT
+========================= */
 loadFoods();

@@ -12,8 +12,8 @@
     {
       "name": "Suya Spot",
       "city": "Abuja",
-      "lat": 9.0820,
-      "lon": 7.4100,
+      "lat": 9.082,
+      "lon": 7.41,
       "foods": ["Suya", "Boli"],
       "rating": 4.8,
       "image": "images/restaurants/suya.jpg"
@@ -31,10 +31,10 @@
       "name": "Calabar Delight",
       "city": "Calabar",
       "lat": 4.9517,
-      "lon": 8.3220,
+      "lon": 8.322,
       "foods": ["Edikang Ikong", "Fufu"],
       "rating": 4.7,
-      "image": "images/restaurants/calabar.jpg"
+      "image": "images/restaurants/calabar.webp"
     },
     {
       "name": "Northern Bites",
@@ -49,7 +49,7 @@
       "name": "Ibadan Grill",
       "city": "Ibadan",
       "lat": 7.3775,
-      "lon": 3.9470,
+      "lon": 3.947,
       "foods": ["Amala", "Gbegiri"],
       "rating": 4.6,
       "image": "images/restaurants/ibadan.jpg"

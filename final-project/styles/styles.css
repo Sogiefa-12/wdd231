@@ -330,6 +330,90 @@ button[type="submit"]:hover {
 }
 
 /* =========================
+   THANK YOU PAGE
+========================= */
+
+
+.thankyou-container {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+.thankyou-container h1 {
+    color: #004080;
+    margin-bottom: 1rem;
+}
+
+#result {
+    font-size: 1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+}
+
+#result strong {
+    color: #ff6347;
+}
+
+#result em {
+    color: #333;
+    font-style: italic;
+}
+
+/* Back button */
+.back-btn {
+    margin-top: 1.5rem;
+    display: inline-block;
+    background: #ff6347;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+    background: #e5533d;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #004080;
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+}
+
+/* =========================
    FOOTER
 ========================= */
 footer {
@@ -442,6 +526,25 @@ footer a:hover {
     border-radius: 6px;
 }
 
+/* Back to Home Button */
+.back-home-btn {
+    display: inline-block;
+    margin-bottom: 1rem;
+    background: #004080;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.back-home-btn:hover {
+    background: #002f5c;
+    transform: translateY(-2px);
+}
+
+
 /* =========================
    MOBILE MENU
 ========================= */
@@ -492,6 +595,18 @@ footer a:hover {
     .food-grid {
         grid-template-columns: repeat(2, 1fr);
         /* balanced */
+    }
+
+    #restaurants-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #food-guide-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem;
     }
 
     #favorites-container {
