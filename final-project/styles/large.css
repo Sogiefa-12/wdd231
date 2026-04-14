@@ -1,0 +1,70 @@
+/* =========================
+   MOBILE MENU
+========================= */
+@media (max-width: 768px) {
+
+    #menu {
+        display: block;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        background: #004080;
+        flex-direction: column;
+        width: 200px;
+        display: none;
+        padding: 1rem;
+        z-index: 2000;
+        box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.3);
+        /* FIXED layering */
+    }
+
+    .navigation.open {
+        display: flex;
+    }
+
+    .hero {
+        height: 220px;
+    }
+}
+
+/* =========================
+   DESKTOP LAYOUT (KEY FIX)
+========================= */
+@media (min-width: 1024px) {
+
+    .main-grid {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .recommended,
+    .featured {
+        height: 100%;
+    }
+
+    .food-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* balanced */
+    }
+
+    #restaurants-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #food-guide-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #favorites-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        padding: 2rem;
+    }
+}

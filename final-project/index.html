@@ -8,14 +8,16 @@
     <title>Local Food Discovery Guide</title>
 
     <!-- SEO -->
-    <meta name="description" content="Discover local foods and restaurants near you.">
+    <meta name="description"
+        content="Discover delicious local foods, explore top restaurants, and get personalized meal recommendations based on your location and weather.">
     <meta name="author" content="Sarah Imarhenakhue Ogiefa">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Local Food Discovery Guide">
-    <meta property="og:description" content="Find the best local meals and restaurants.">
-    <meta property="og:image" content="images/food-hero.webp">
-    <meta property="og:url" content="https://yourusername.github.io/final-project/index.html">
+    <meta property="og:title" content="Explore Local Foods and Restaurants Near You">
+    <meta property="og:description"
+        content="Find the best local meals, explore restaurants, and discover food recommendations based on your location and weather.">
+    <meta property="og:image" content="https://sogiefa-12.github.io/wdd231/final-project/images/food-hero.webp">
+    <meta property="og:url" content="https://sogiefa-12.github.io/wdd231/final-project/index.html">
     <meta property="og:type" content="website">
 
     <!-- Favicon -->
@@ -29,6 +31,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/large.css">
 
     <!-- JavaScript -->
     <script type="module" src="scripts/main.js"></script>
@@ -76,7 +79,7 @@
             <section class="weather">
                 <h2>Current Weather</h2>
                 <div class="weather-info">
-                    <img id="weather-icon" src="" alt="Current weather icon" class="hidden">
+                    <img id="weather-icon" src="images/weather.png" alt="Current weather icon" class="hidden">
                     <div>
                         <p id="temp">Loading temperature...</p>
                         <p id="desc"></p>
@@ -96,10 +99,10 @@
                 <div id="featured-container"></div>
 
                 <dialog id="food-modal">
-                    <h3 id="food-name"></h3>
-                    <img id="food-image" src="" alt="">
-                    <p id="food-description"></p>
-                    <button id="favorite-btn">❤️ Add to Favorites</button>
+                    <h3 id="food-name">Loading...</h3>
+                    <img id="food-image"  alt="Selected food image" class="hidden">
+                    <p id="food-description">Loading description...</p>
+                    <button id="favorite-btn" type="button">❤️ Add to Favorites</button>
                     <button id="close-modal">Close</button>
                 </dialog>
             </section>
